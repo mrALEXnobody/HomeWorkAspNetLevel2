@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CarViewModel>
+
+@{ ViewData["Title"] = "Список автомобилей"; }
+
+<hr />
+<a asp-action="Edit" class="btn btn-success">Добавить</a>
+<hr />
+
+<table class="table table-bordered">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a></td>
+            <td>@item.Company</td>
+            <td>@item.Model</td>
+            <td>@item.Price</td>
+            <td>RUB</td>
+            <td><a asp-action="Buy" asp-route-id="@item.Id">Купить</a></td>
+            <td><a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-cut"></i></a></td>
+        </tr>
+    }
+</table>

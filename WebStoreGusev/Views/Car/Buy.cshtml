@@ -1,0 +1,28 @@
+﻿@model WebStoreGusev.Models.CarViewModel
+
+@{ ViewData["Title"] = "Купить"; }
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>Производитель</td>
+        <td>@Model.Company</td>
+    </tr>
+    <tr>
+        <td>Модель</td>
+        <td>@Model.Model</td>
+    </tr>
+    <tr>
+        <td>Цвет</td>
+        <td>@Model.Color</td>
+    </tr>
+    <tr>
+        <td>Цена</td>
+        <td>@Model.Price RUB</td>
+    </tr>
+</table>
+<br />
+
+<div>
+    <a asp-action="Index">< Назад</a>
+</div>
